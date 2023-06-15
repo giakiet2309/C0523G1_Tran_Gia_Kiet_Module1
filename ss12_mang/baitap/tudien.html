@@ -6,12 +6,32 @@
     <title>Từ điển</title>
 </head>
 <body>
-    Nhập từ
-    <input type="text" id="tudien">
-    <button onclick="tracuu()">Dịch</button>
+Nhập từ
+<input type="text" id="tudien">
+<button onclick="tracuu()">Dịch</button>
+<p id="result"></p>
     <script>
-        function tracuu()
-        let 
+    function tracuu() {
+        let book = document.getElementById("tudien").value.toLowerCase();
+        let eng = ["apple", "orange", "banana","dog","cat","pig"];
+        let vie = ["Quả táo", "Quả cam", "Quả chuối","Con chó","Con mèo","Con lợn"];
+        let i = 0;
+        let ketqua = -1;
+        while (i < eng.length) {
+            if (eng[i] == book) {
+            ketqua = i;
+            }
+            i++;
+    }
+      if (ketqua == -1) {
+        document.getElementById("result").innerText = "Từ bạn nhập tôi không dịch được";
+    } else {
+        document.getElementById("result").innerText = vie[ketqua];
+    }
+  }
     </script>
+    <h4>
+        Chỉ dịch nhưng từ đơn giản : apple , orange , banana , dog , cat , pig
+    </h4>
 </body>
 </html>
