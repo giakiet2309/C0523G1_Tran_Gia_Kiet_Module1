@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Giá trị lớn nhất</title>
+</head>
+<body>
+<script>
+    let showMax = "";
+    let random=[];
+    for (let i = 0; i<10; i++) {
+        random[i] = Math.floor(Math.random()*50);
+    }
+    document.write( "Dãy số random : " +random + '</br>');
+    let max = random[0]
+    for (let i = 1; i < random.length; i++) {
+        if (max < random[i]) {
+            max = random[i]
+            showMax = i
+        }
+    }
+    document.write("Số lớn nhất là: " + max + " tại vị trí là : " + showMax);
+    // Lúc chạy giá trị lớn nhất ở vị trí '0' thì ko hiện vị trí ạ , em vẫn chưa biết tại sao
+    // VD : Số lớn nhất là: 47 tại vị trí là : 
+</script>
+</body>
+</html>

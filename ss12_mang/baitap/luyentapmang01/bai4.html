@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    let random=[];
+    for (let i = 0; i<10; i++) {
+        random[i] = Math.floor(Math.random()*20);
+    }
+    document.write( "Dãy số random : " +random + '</br></br>');
+    
+    document.write("Dãy số sau khi đảo ngược : ")
+
+    for(let i = random.length - 1; i >= 0; i--) {
+        document.writeln(random[i]);
+    }
+ </script>
+</body>
+</html>

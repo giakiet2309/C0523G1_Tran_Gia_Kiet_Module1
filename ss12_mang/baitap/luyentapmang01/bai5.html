@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nguyên âm</title>
+</head>
+<body>
+    <script>
+    let text = prompt("Nhập 1 câu tiếng việt vào đây : ");
+    text = text.split('');
+    let count = 0;
+    let nguyenAm = ["a", "ă", "â", "e", "ê", "i", "o", "ô", "ơ", "u", "ư", "y"];
+    for (let i = 0; i < text.length; i++) {
+        for (let j = 0; j < nguyenAm.length; j++) {
+            if (text[i] === nguyenAm[j]) {
+                count++;
+            }
+        }
+    }
+    alert("Có " + count + " chữ nguyên âm trong dãy này");
+    </script>
+</body>
+</html>

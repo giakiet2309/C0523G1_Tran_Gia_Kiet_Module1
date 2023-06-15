@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button type="button" onclick="tai_lai_trang()">Tải lại trang</button>
+<br>
+<br>
+<script>
+    let sum = 0;
+    let random=[];
+    for (let i = 0; i<10; i++) {
+        random[i] = Math.floor(Math.random()*50);
+        sum += random[i]/10
+    }
+    document.write( "Dãy số random : " +random + '</br>');
+    let max = random[0]
+    for (let i = 1; i < random.length; i++) {
+        if (max < random[i]) {
+            max = random[i]
+
+        }
+    }
+    document.write("</br>Số lớn nhất là: " + max + "</br> Giá trị trung bình của dãy số trên là : " + sum.toFixed(2));
+    function tai_lai_trang(){
+            location.reload();
+        }
+    </script>
+</body>
+</html>
