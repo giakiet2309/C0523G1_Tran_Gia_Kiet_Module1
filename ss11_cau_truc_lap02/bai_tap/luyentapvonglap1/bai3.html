@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fibonacci</title>
+</head>
+<body>
+    <script>
+        let b = +prompt("Nhấn 'OK' để bắt đầu đếm 20 số dãy Fibonacci")
+        let i = 0;
+        let j = 1;
+        
+        let ds = "1: 1<br>";
+        for (let x = 2; x <= 20; x++){
+          a = i + j;
+          ds = ds + x + ": " + a + "<br>";
+          i = j;
+          j = a;
+        }
+        
+        document.write(ds);
+      </script>
+    <br>
+    <h2>XONG !</h2>
+</body>
+</html>

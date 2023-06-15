@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tính số tuổi</title>
+</head>
+<body>
+        <input type="text" id="sotuoi" placeholder="Nhập số tuổi vào đây">
+        <button onclick="sotuoi()">Tính</button>
+        <p id="ketqua"></p>
+
+    <script>
+         function sotuoi() {
+            let sotuoi = parseFloat(document.getElementById("sotuoi").value);
+
+            if (sotuoi>=16) {
+                dapan = sotuoi + " tuổi đủ điều kiện vào lớp 10"
+            } else {
+                dapan = sotuoi + " tuổi không đủ điều kiện vào lớp 10"
+            }
+                document.getElementById("ketqua").innerHTML = dapan
+         }
+    </script>
+</body>
+</html>

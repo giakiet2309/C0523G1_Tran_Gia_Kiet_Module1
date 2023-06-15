@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function tinh() {
+        let i = 1;
+        let tinh = 0;
+        let ds = "";
+        let sum = 0;
+      
+        while (tinh < 30){
+          if (i%7 == 0) {
+            tinh++;
+            sum = sum + i;
+            ds = ds + tinh + ": " + i + "<br>";
+          }
+          i++;
+        } document.getElementById("tinh2").innerHTML = (ds + "Tổng  : " + sum);
+    }
+      </script>
+      <h2>Tính tổng của 30 số chia hết cho 7 đầu tiên trong các số tự nhiên</h2>
+      <input type="button" onclick="tinh()" value="Tính">
+      <p id="tinh2"></p>
+</body>
+</html>

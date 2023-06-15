@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tính diện tích hình tam giác vuông</title>
+</head>
+<body>
+<input type="number" id="a" placeholder="Nhập độ dài cạnh kề a"> 
+<br>
+<input type="number" id="b" placeholder="Nhập độ dài cạnh kề b "> 
+<br>
+<input type="button" onclick="change()" value="Tính">
+<p><span id="S"></span></p>
+<script>
+  function change() {
+    let a = +parseFloat(document.getElementById("a").value);
+    let b = +parseFloat(document.getElementById("b").value);
+    let ketqua = a * b / 2 ;
+    document.getElementById("S").innerHTML = ketqua  ;
+  }
+</script>
+</body>
+</html> 

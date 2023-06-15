@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lãi ngân hàng</title>
+</head>
+<body>
+<table>
+    <tr>
+        <td>Số tiền vay</td>
+        <td><input type="number" id="money"></td>
+    </tr>
+    <tr>
+        <td>Số tháng cho vay</td>
+        <td><input type="number" id="monthv"></td>
+    </tr>
+    <tr>
+        <td>Lãi suất hàng tháng (%)</td>
+        <td><input type="number" id="lai"></td>
+    </tr>
+    <tr>
+        <td>Số Tiền phải trả</td>
+        <td><input type="number" id="result" disabled></td>
+    </tr>
+    <tr>
+        <td><button onclick="result()">Tính</button></td>
+    </tr>
+<script>
+    function result() {
+        let mn = +document.getElementById("money").value;
+        let mv = +document.getElementById("monthv").value;
+        let la = +document.getElementById("lai").value;
+        let i = 0;
+
+        while (i<mv) {
+            mn = mn * (1+la/100);
+            i++;
+        }
+        document.getElementById("result").value=mn.toFixed(2);
+    }
+</script>
+</table>
+</body>
+</html>

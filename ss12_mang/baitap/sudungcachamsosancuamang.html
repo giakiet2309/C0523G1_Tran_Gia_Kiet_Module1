@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+// BAI 1
+    myColor = ["Red", "Green", "White", "Black"];
+    bai1 = myColor.toString();
+
+// BAI 2
+    const num=window.prompt(" Bài 2 : Điền dãy số bất kì");
+    const str = num.toString();
+    const sque = [str[0]];
+  
+    for(let x=1; x<str.length; x++)
+  {
+        if((str[x-1]%2 === 0)&&(str[x]%2 === 0))
+        {
+            sque.push('-', str[x]);
+         }
+        else
+        {
+            sque.push(str[x]);
+        }
+  }
+    let str2 = window.prompt("Bài 3 : Điền 1 câu bất kì");
+    let UPPER = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    let LOWER = 'abcdefghijklmnopqrstuvwxyz';
+    let result = [];
+  
+    for(var x=0; x<str2.length; x++)
+    
+    // BAI 3
+  {
+        if(UPPER.indexOf(str2[x]) !== -1)
+        {
+        result.push(str2[x].toLowerCase());
+        }
+        else if(LOWER.indexOf(str2[x]) !== -1)
+        {
+        result.push(str2[x].toUpperCase());
+        }
+        else 
+        {
+        result.push(str2[x]);
+        }
+  }
+    document.write("Bài 1: "+ bai1 +"<br>Bài 2: "+sque.join('')+" <br>Bài 3: "+(result.join('')));
+</script>
+</body>
+</html>

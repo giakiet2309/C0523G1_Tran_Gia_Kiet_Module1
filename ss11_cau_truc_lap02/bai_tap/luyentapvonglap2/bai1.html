@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fibonacci</title>
+</head>
+<body>
+    <script>
+        let b = +prompt("Nhập vào số dãy Fibonacci muốn tạo")
+        let i = 0 
+        let j = 1
+        let ds = "1: 1<br>";
+
+        for(let x=2; x <=b;x++) {
+            a = i+j;
+            ds = ds + x + ": " + a + "<br>";
+            i = j;
+            j = a;
+        }
+        
+        document.write(ds);
+        
+    </script>
+</body>
+</html>

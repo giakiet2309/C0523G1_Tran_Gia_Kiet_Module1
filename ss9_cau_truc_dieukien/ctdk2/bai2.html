@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Chuyển từ mét sang feet</title>
+</head>
+<body>
+<input type="number" id="m" placeholder="Nhập độ dài (m)"> 
+<br>
+<input type="button" onclick="change()" value="Đổi">
+<p><span id="F"></span></p>
+<script>
+  function change() {
+    let m = +parseFloat(document.getElementById("m").value);
+    let ketqua = m*3.2808 ;
+    document.getElementById("F").innerHTML = ketqua + "Feet" ;
+  }
+</script>
+</body>
+</html>

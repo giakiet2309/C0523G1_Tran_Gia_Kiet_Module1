@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tính diện tích hình chữ nhật</title>
+</head>
+<body>
+<input type="number" id="a" placeholder="Nhập độ dài cạnh a"> 
+<br>
+<input type="number" id="b" placeholder="Nhập độ dài cạnh b "> 
+<br>
+<input type="button" onclick="change()" value="Tính">
+<p><span id="P"></span></p>
+<script>
+  function change() {
+    let a = +parseFloat(document.getElementById("a").value);
+    let b = +parseFloat(document.getElementById("b").value);
+    let ketqua = a * b ;
+    document.getElementById("P").innerHTML = ketqua  ;
+  }
+</script>
+</body>
+</html>

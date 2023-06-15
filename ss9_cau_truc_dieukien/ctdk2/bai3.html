@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tính diện tích hình vuông</title>
+</head>
+<body>
+<input type="number" id="m" placeholder="Nhập độ dài cạnh "> 
+<br>
+<input type="button" onclick="change()" value="Tính">
+<p><span id="S"></span></p>
+<script>
+  function change() {
+    let m = +parseFloat(document.getElementById("m").value);
+    let ketqua = m*m ;
+    document.getElementById("S").innerHTML = ketqua  ;
+  }
+</script>
+</body>
+</html>

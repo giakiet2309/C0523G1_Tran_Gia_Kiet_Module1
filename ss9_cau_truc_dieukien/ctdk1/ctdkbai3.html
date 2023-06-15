@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lớn hay nhỏ hơn không</title>
+</head>
+<body>
+        <input type="text" id="number" placeholder="Nhập số">
+        <button onclick="number()">Tính</button>
+        <p id="ketqua"></p>
+
+    <script>
+         function number() {
+            let number = parseFloat(document.getElementById("number").value);
+
+            if (number>0) {
+                dapan = number + " lớn hơn 0 "
+             }   else if (number==0) {
+                dapan = number + " bằng 0"
+            } else {
+                dapan = number + " nhỏ hơn 0"
+            }
+                document.getElementById("ketqua").innerHTML = dapan
+            }
+         
+    </script>
+</body>
+</html>

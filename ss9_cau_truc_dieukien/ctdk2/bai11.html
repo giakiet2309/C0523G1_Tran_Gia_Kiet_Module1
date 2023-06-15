@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tính thuế thu nhập</title>
+</head>
+<body>
+    <h1>Chương trình tính thuế</h1>
+    <input type="number" id="money" placeholder="Nhập số tiền thu nhập"> Triệu đồng
+   <br>
+    <button onclick="tinhthue()">Tính</button>
+    <p id="result"></p>
+    <script>
+        function tinhthue() {
+            let a = +document.getElementById("money").value;
+        let t = 250000;
+        let y = 750000;
+        let u = 1650000;
+        let i = 3250000;
+        let o = 5850000;
+        let p = 9850000;
+
+        let z = 5000000;
+        let x = 10000000;
+        let c = 18000000;
+        let v = 32000000;
+        let n = 52000000;
+        let m = 80000000;
+        if (a <= z) {
+            let b = a * 5 / 100;
+            document.getElementById("result").innerHTML= "Thuế thu nhập cá nhân của bạn là " + b + " VNĐ";
+        } else if (a <= x) {
+            b = (a * 10 / 100) - t;
+            document.getElementById("result").innerHTML= "Thuế thu nhập cá nhân của bạn là " + b + " VNĐ";
+        } else if (a <= c) {
+            b = (a * 15 / 100) - y;
+            document.getElementById("result").innerHTML= "Thuế thu nhập cá nhân của bạn là " + b + " VNĐ";
+
+        } else if (a <= v) {
+            b = (a * 20 / 100) - u;
+            document.getElementById("result").innerHTML= "Thuế thu nhập cá nhân của bạn là " + b + " VNĐ";
+        } else if (a <= n) {
+            b = (a * 25 / 100) - i;
+            document.getElementById("result").innerHTML= "Thuế thu nhập cá nhân của bạn là " + b + " VNĐ";
+
+        } else if (a <= m) {
+            b = (a * 30 / 100) - o;
+            document.getElementById("result").innerHTML= "Thuế thu nhập cá nhân của bạn là " + b + " VNĐ";
+
+        } else {
+            b = (a * 35 / 100) - p;
+            document.getElementById("result").innerHTML= "Thuế thu nhập cá nhân của bạn là " + b + " VNĐ";
+
+        }
+    }
+        
+    </script>
+</body>
+</html>

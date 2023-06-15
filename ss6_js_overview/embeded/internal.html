@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id="content">Hello</p>
+<button onclick="changeData('green')">Change</button>
+<button onclick="changeData('blue')">Change2</button>
+
+<script>
+    debugger
+    count = 0;
+    function changeData(color) {
+        document.getElementById('content').style.color = color
+        debugger
+        if(count > 4) {
+            document.getElementById('content').style.background = 'red'
+        }
+        count = count + 1;
+    }
+</script>
+</body>
+</html>

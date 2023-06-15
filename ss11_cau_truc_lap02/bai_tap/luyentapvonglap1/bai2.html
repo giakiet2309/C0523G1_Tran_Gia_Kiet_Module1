@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nhiệt độ</title>
+</head>
+<body>
+    <script>
+        let i = +prompt ("Nhiệt độ hiện tại")
+        while (i>=100 ||i<=20 ) {
+            if (i>=100) {
+            alert("Yêu cầu giảm nhiệt độ");
+          } if (i<=20) {
+            alert("yêu cầu tăng nhiệt độ");
+          }
+          i = +prompt ("Nhiệt độ hiện tại");
+        }
+            alert("Nhiệt độ hiện tại là " + i +" độ")
+    </script>
+</body>
+</html>

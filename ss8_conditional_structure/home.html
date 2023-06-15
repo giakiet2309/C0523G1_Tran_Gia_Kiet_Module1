@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //null, undefined, 0, false, ''
+    // let x = 1;
+    // if(x) {
+    //     alert("true")
+    // } else {
+    //     alert("false")
+    // }
+    //  score < 50: Rớt module,
+    // score >= 50 & score < 75 => hên xui,
+    // score >= 75, qua module
+    let score = +prompt("Nhập vào điểm của bạn");
+
+    if (score < 50) {
+        document.write("Rớt module</br>");
+    }
+
+    if (score >= 50 && score < 75) {
+        document.write("Hên xui</br>");
+    }
+
+    if (score >= 75) {
+        document.write("Qua module</br>");
+    }
+
+    // Cách 2:
+    let score = +prompt("Nhập vào điểm của bạn");
+
+    if (score < 50) {
+        document.write("Rớt module</br>");
+    } else if (score < 75) {
+        document.write("Hên xui</br>");
+    } else {
+        document.write("Qua module</br>");
+    }
+
+
+    // let a = 2, b = 2, c = 3;
+    if ( a === b && a === c) {
+        alert("28")
+    }
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đổi  tiền tệ</title>
+</head>
+<body>
+    <table>
+        <th>Amount</th>
+        <th>Currency</th>
+        <th></th>
+        <th></th>
+        <th>To Currency</th>
+     <tr>
+        <td><input type="number" id="am" value="amount" </td>
+        <td><select id="From">
+            <option value="VietNam">VietNam</option>
+            <option value="USD">USD</option>
+        </select></td>
+        <td></td>
+        <td></td>
+        <td><select id="To">
+            <option value="VietNam">VietNam</option>
+            <option value="USD">USD</option>
+        </select></td>
+        <td><input type="submit" value="Convert" id="cv" onclick="calculate()"></td>
+    </tr>
+    <tr id="Result"></tr>
+
+
+    <script>
+        function calculate() {
+            let a = document.getElementById("am").value
+            let b = document.getElementById("From").value
+            let c = document.getElementById("To").value
+
+        if (b == "USD" && c =="VietNam") {
+            Result = (a * 23000) +" Đ";
+        } else if (b == "VietNam" && c=="USD" ) {
+            Result = (a / 23000) +" $";
+        } else if (b == "VietNam"){
+            Result = a + " Đ"
+        } else {
+            Result = a + " $"
+        }
+        document.getElementById("Result"). innerHTML = "<h2>" + Result + "</h2>"
+        }
+    </script>
+    </table>
+</body>
+</html>

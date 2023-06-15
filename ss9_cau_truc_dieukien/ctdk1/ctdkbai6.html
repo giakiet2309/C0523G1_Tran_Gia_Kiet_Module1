@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="hoahong" placeholder="doanh số bán hàng "> 
+    <button onclick="hoahong()">Tính</button>
+<p id="ketqua"></p>
+    <script>
+        function hoahong() {
+        let hoahong1 = parseFloat(document.getElementById("hoahong").value);
+        let avg = ( hoahong1 * 0.1 )
+        document.getElementById("ketqua").innerHTML =("số tiền hoa hồng của bạn là " + avg +  "k" )
+    }
+    </script>
+</body>
+</html>

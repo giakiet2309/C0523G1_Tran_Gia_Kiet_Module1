@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Máy Tính</title>
+</head>
+<body>
+   
+        
+            <input type="number" id="number1"  placeholder="Nhập số thứ nhất" >
+            <input type="number" id="number2"  placeholder="Nhập số thứ hai" >
+            <button onclick="calculate1()">Cộng</button>
+            <button onclick="calculate2()">Trừ</button>
+            <button onclick="calculate3()">Nhân</button>
+            <button onclick="calculate4()">Chia</button>
+    
+           <h3>Result:</h3>
+           <div id="result">Kết quả nè</div>
+        <script>
+           function calculate1() {
+            let number1 = document.getElementById("number1").value;
+            let number2 = document.getElementById("number2").value;
+            let result  = Number(number1) + Number(number2);
+            document.getElementById("result"). innerHTML = result;
+        }   
+            function calculate2() {
+            let number1 = document.getElementById("number1").value;
+            let number2 = document.getElementById("number2").value;
+            let result  = Number(number1) - Number(number2);
+            document.getElementById("result"). innerHTML = result;
+        }
+            function calculate3() {
+            let number1 = document.getElementById("number1").value;
+            let number2 = document.getElementById("number2").value;
+            let result  = Number(number1) * Number(number2);
+            document.getElementById("result"). innerHTML = result;
+        }    
+            function calculate4() {
+            let number1 = document.getElementById("number1").value;
+            let number2 = document.getElementById("number2").value;
+            let result  = Number(number1) / Number(number2);
+            document.getElementById("result"). innerHTML = result;
+        }
+        </script>
+</body>
+</html>

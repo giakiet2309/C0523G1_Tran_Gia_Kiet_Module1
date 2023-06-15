@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giải phương trình bậc nhất</title>
+</head>
+<body>
+    <input type="number" placeholder="Nhập a" id="numA"> </br>
+    <br>
+    <input type="number" placeholder="Nhập b" id="numB"> </br>
+    <br>
+    <button id="cal" onclick="tinh()">Giải</button>
+    <p id="equation"></p>
+    <p id="result"></p>
+    <script>
+        function tinh() {
+        let a = +parseFloat(document.getElementById("numA").value);
+        let b = +parseFloat(document.getElementById("numB").value);
+
+        Equation = a + "x+" + b + "= 0";
+
+        if(a === 0) { 
+                if(b === 0) {
+                    Result = "Phương trình vô số nghiệm";
+                } else {
+                    Result = "Phương trình vô nghiệm";
+                }
+            } else
+                Result = "Phương trình có nghiệm:" + (-b / a);
+                
+                document.getElementById("result").innerHTML = Result;
+                document.getElementById("equation").innerHTML = Equation;
+    } 
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let tb = +prompt("Bấm 'OK' để băt đầu chạy")
+        let i = 0;
+        let j = 1;
+        let ds = "1: 1<br>";
+      
+        for (let x = 2; x % 6; x++){
+          a = i + j;
+          ds = ds + x + ": " + a + "<br>";
+          i = j;
+          j = a;
+        }
+        document.write(ds);
+    </script>
+    </br>
+    <h2>Số thứ 5 là số đầu tiên chia hết cho 5 trong dãy fibonacci </h2>
+</body>
+</html>

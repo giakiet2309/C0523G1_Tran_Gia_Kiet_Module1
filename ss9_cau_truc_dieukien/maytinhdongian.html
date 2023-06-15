@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Máy tính đơn giản</title>
+    
+</head>
+<body>
+    <table>
+    <tr>
+        <th colspan="4"><input id="result" value="0"></th>
+    </tr>
+    <tr>
+        <td><input id="btn1" type="button" value="1" onclick="appendToResult('1')"></td>
+        <td><input id="btn2" type="button" value="2" onclick="appendToResult('2')"></td>
+        <td><input id="btn3" type="button" value="3" onclick="appendToResult('3')"></td>
+        <td><input id="btn_Add" type="button" value="+" onclick="appendToResult('+')"></td>
+    </tr>
+    <tr>
+        <td><input id="btn4" type="button" value="4" onclick="appendToResult('4')"></td>
+        <td><input id="btn5" type="button" value="5" onclick="appendToResult('5')"></td>
+        <td><input id="btn6" type="button" value="6" onclick="appendToResult('6')"></td>
+        <td><input id="btn_minus" type="button" value="-" onclick="appendToResult('-')"></td>
+    </tr>
+    <tr>
+        <td><input id="btn7" type="button" value="7" onclick="appendToResult('7')"></td>
+        <td><input id="btn8" type="button" value="8" onclick="appendToResult('8')"></td>
+        <td><input id="btn9" type="button" value="9" onclick="appendToResult('9')"></td>
+        <td><input id="btn_multiply" type="button" value="*" onclick="appendToResult('*')"></td>
+    </tr>
+    <tr>
+        <td><input id="btn_reset" type="button" value="C" onclick="resetResult('C')"></td>
+        <td><input id="btn0" type="button" value="0" onclick="appendToResult('0')"></td>
+        <td><input id="btn_calculate" type="button" value="=" onclick="calculateResult('=')"></td>
+        <td><input id="btn_division" type="button" value="/" onclick="appendToResult('/')"></td>
+    </tr>
+</table>
+<script>
+    function appendToResult(value) {
+        document.getElementById("result").value += value;
+    }
+    function resetResult() {
+        document.getElementById("result").value = "";
+    }
+    function calculateResult() {
+        var result = document.getElementById("result").value;
+        document.getElementById("result").value = eval(result)
+    }
+</script>
+</body>
+</html>

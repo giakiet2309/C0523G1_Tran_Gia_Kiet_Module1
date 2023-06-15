@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" id="numb1" placeholder="điểm kiểm tra miệng"> <br>
+    <input type="number" id="numb2" placeholder="điểm kiểm tra 15p"> <br>
+    <input type="number" id="numb3" placeholder="điểm kiểm tra 1 tiết"> <br>
+    <input type="number" id="numb4" placeholder="điểm kiểm tra giữa kì"> <br>
+    <input type="number" id="numb5" placeholder="điểm kiểm tra học kì"> <br>
+    <button onclick="diemtb()">Tính</button>
+    <p id="ketqua"></p>
+    <script>
+        function diemtb() {
+            let numb1 = parseFloat(document.getElementById("numb1").value);
+            let numb2 = parseFloat(document.getElementById("numb2").value);
+            let numb3 = parseFloat(document.getElementById("numb3").value);
+            let numb4 = parseFloat(document.getElementById("numb4").value);
+            let numb5 = parseFloat(document.getElementById("numb5").value);
+            let avg = (numb1 + numb2 + numb3 + numb4 + numb5) / 5
+        if (avg>=8) {
+            ketqua = " Học sinh Giỏi"
+        } else if (avg>=6.5) {
+            ketqua = "Học sinh tiên tiến"
+        } else if ( avg>=5) {
+            ketqua = "Học sinh trung bình"
+        } else {
+            ketqua = "Học sinh Yếu"
+        }
+            document.getElementById("ketqua").innerHTML = ketqua
+    }
+    </script>
+</body>
+</html>

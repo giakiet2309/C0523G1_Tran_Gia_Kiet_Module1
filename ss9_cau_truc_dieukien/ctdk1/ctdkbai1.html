@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nhập hai số</title>
+</head>
+<body>
+<input type="text" id="numA" placeholder="Nhập số A">
+<input type="text" id="numB" placeholder="Nhập số B">
+<button onclick="chiahet()">Tính</button>
+<p id="ketqua"></p>
+<script>
+    function chiahet() {
+    let numA = parseFloat(document.getElementById("numA").value);
+    let numB = parseFloat(document.getElementById("numB").value);
+
+    if (numA % numB == 0 ) {
+        ketqua = numA + " chia hêt cho " + numB;
+    } else {
+        ketqua = numA + " không chia hết cho "+ numB;
+    }
+        document.getElementById("ketqua").innerHTML = ketqua
+    }
+</script>
+</body> 
+</html>
