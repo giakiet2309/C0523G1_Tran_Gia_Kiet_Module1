@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+    <script>
+        let string = [8, 6, 2, 4, 9, 1, 5, 7,65,45]
+        let showNum = [];
+        let arr = 0;
+        for (let i = 0; i < string.length; i++) {
+            if (typeof string[i] === "number") {
+                arr = i
+                showNum.push(string[i])
+            }
+        }
+        document.write("Mảng có " + arr + " phần tử và  số ký tự số trong mảng là " + showNum)
+    </script>
+
+</body>
+</html>

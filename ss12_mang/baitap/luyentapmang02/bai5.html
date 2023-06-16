@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 5</title>
+</head>
+
+<body>
+    <script>
+        let arr1 = prompt("Mời bạn nhập chuỗi thứ 1:");
+        let arr2 = prompt("Mời bạn nhập chuỗi thứ 2:");
+        arr1 = arr1.split(' ');
+        arr2 = arr2.split(' ');
+        let obj = true;
+        if (arr1.length === arr2.length) {
+            for (let i = 0; i < arr1.length; i++) {
+                if (arr1[i] !== arr2[i]) {
+                    obj = false;
+                    alert("2 chuỗi này không giống nhau");
+                    break;
+                }
+            }
+            if (obj) {
+                alert("2 chuỗi này giống nhau");
+            }
+        } else {
+            alert("2 chuỗi này không giống nhau");
+        }
+
+    </script>
+</body>
+
+</html>
