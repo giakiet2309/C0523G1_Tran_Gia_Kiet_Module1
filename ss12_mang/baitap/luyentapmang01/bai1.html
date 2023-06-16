@@ -1,24 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Số nguyên lớn hơn 10</title>
 </head>
+
 <body>
-<script>
-    let p = +prompt("Nhấn 'OK' để bắt đầu")
-    let random=[];
-    for (let i = 0; i<10; i++) {
-        random[i] = Math.floor(Math.random()*50);
-    }
-    let songuyen=[];
-    for (let i = 0; i< random.length; i++) {
-        if (random[i] >= 10) {
-            songuyen.push(random[i]);
+    <script>
+        let p = +prompt("Nhấn 'OK' để bắt đầu")
+        let random = [];
+        for (let i = 0; i < 10; i++) {
+            random[i] = Math.floor(Math.random() * 30);
         }
-    }
-    document.write("Dãy random : " + random + "</br>Số nguyên >= 10 : " + songuyen);
-</script>
+        let songuyen = [];
+        for (let i = 0; i < random.length; i++) {
+            if (random[i] >= 10) {
+                songuyen.push(random[i]);
+            }
+        }
+        document.write("Dãy random : " + random + "</br>Số nguyên >= 10 : " + songuyen);
+    </script>
 </body>
+
 </html>

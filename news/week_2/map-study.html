@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = [10, 20, 30, 40, 50];
+
+    // for (let i = 0; i < arr.length; i++) {
+    //     arr[i] += 2;
+    // }
+    // arr = arr.map(hau => hau + 3);
+    arr = arr.map(_ => [10, 20, 30]);
+
+    for (let i = 0; i < arr.length; i++) {
+        for (let j = 0; j < arr[i].length; j++) {
+            document.writeln(arr[i][j]);
+        }
+        document.write("<br/>")
+    }
+</script>
+</body>
+</html>

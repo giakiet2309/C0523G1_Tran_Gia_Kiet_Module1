@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let a = [];
+        for (let i = 0; i < 10; i++) {
+            a[i] = Math.floor(Math.random() * 20);
+
+        }
+        document.write("Dãy số a : " + a + '</br></br>');
+
+        let b = [];
+        for (let v = 0; v < 10; v++) {
+            b[v] = Math.floor(Math.random() * 20);
+
+        }
+        document.write("Dãy số b : " + b + '</br></br>');
+
+        let c =[];
+
+        for (let i = 0; i < a.length; i++) {
+            c.push(a[i]);
+        }
+        for (let i = 0; i < b.length; i++) {
+            c.push(b[i]);
+        }
+        document.write("Dãy số c : " + c);
+
+    </script>
+</body>
+
+</html>

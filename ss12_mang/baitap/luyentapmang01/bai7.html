@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>V7</title>
+</head>
+
+<body>
+    <script>
+        let random = [];
+        for (let i = 0; i < 10; i++) {
+            random[i] = Math.floor(Math.random() * 20);
+
+        }
+        document.write("Dãy số random : " + random + '</br></br>');
+
+        let random2;
+        random2 = Math.floor(Math.random() * 20);
+
+
+        document.write("Số nguyên V : " + random2 + '</br></br>');
+        let index = random.indexOf(random2);
+
+        if (index >= 0) {
+            document.write(`Có số ${random2} trong mảng <br>`);
+
+            random.splice(index, 1);
+            random.push(0);
+            document.write("list mới :" + random);
+            
+        } else
+            document.write(`Không tim thấy số ${random2} trong mảng`);
+
+
+    </script>
+</body>
+
+</html>

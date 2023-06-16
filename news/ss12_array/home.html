@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // Mảng số nguyên
+    let arr = [10, 20, 30, 40, 50, 55, 5];
+
+    // document.write(arr[3])
+    for(let i = arr.length - 1; i >= 0; i--) {
+        document.writeln(arr[i]);
+    }
+
+    // Tính tổng các phần tử ở trong mảng
+    // let sum = 0;
+    // for(let i = 0; i < arr.length; i++) {
+    //     sum += arr[i];
+    // }
+    // document.writeln("Sum: " + sum);
+
+
+    // Tính tổng các phần tử lẻ ở trong mảng
+    let sum = 0;
+    for(let i = 0; i < arr.length; i++) {
+        if(arr[i] % 2 == 1) {
+            sum += arr[i];
+        }
+    }
+    document.writeln("Tổng số lẻ: " + sum);
+</script>
+</body>
+</html>

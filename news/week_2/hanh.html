@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    <!--    Nhập xuất mảng 1 chiều -->
+    //Bước 1: Nhập số lượng phần tử của mảng
+    let n;
+    do {
+        n = +prompt("Nhập vào n (n >= 0)");
+
+        if (n <= 0) {
+            alert("Giá trị của n không hợp lệ (n > 0). xin hãy nhập lại");
+        }
+    } while (n <= 0);
+
+    //BƯớc 2: Tạo mảng 1 rỗng và add phần tử vào
+    let arr = [];
+
+    for(let i = 0; i < n; i++) {
+        arr[i] =  +prompt("Nhập vào phần tử thứ " + (i + 1));
+        // arr.push(+prompt("Nhập vào phần tử thứ " + (i + 1)))
+    }
+    // Bước 3: XUất mảng
+    document.write(arr)
+
+</script>
+</body>
+</html>

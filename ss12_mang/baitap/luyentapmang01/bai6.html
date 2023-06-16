@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>V</title>
+</head>
+
+<body>
+    <script>
+        let random = [];
+        for (let i = 0; i < 10; i++) {
+            random[i] = Math.floor(Math.random() * 20);
+
+        }
+        document.write("Dãy số random : " + random + '</br></br>');
+
+        let random2 = [];
+        for (let v = 0; v < 1; v++) {
+            random2[v] = Math.floor(Math.random() * 20);
+
+        }
+        document.write("Số nguyên V : " + random2 + '</br></br>');
+
+        if (random.indexOf(random2[0]) >= 0) {
+            document.write(`Có số ${random2} trong mảng`);
+        } else
+            document.write(`Không tim thấy số ${random2} trong mảng`);
+    </script>
+</body>
+
+</html>
