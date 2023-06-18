@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset=utf-8 />
+    <title>Check a number is prime or not</title>
+    <script>
+        let b = +prompt("Nhập số vào đây")
+        function test_prime() {
+
+            if (b === 1) {
+                alert(b + " không là số nguyên tố")
+            }
+            else if (b === 2) {
+                alert(b + " là số nguyên tố")
+            } else {
+                for (var x = 2; x < b; x++) {
+                    if (b % x === 0) {
+
+                        alert(b + " không là số nguyên tố")
+                        break;
+                    }   alert(b + " là số nguyên tố")
+                        break;
+                }
+            }
+        }
+
+        console.log(test_prime(b));
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
