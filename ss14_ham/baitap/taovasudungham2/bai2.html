@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>binhphuong</title>
+</head>
+<body>
+    <body>
+        <input id="number" placeholder="Nhập bán kính hình tròn">
+        <button onclick="dientich()">Diện tich</button>
+        <button onclick="chuvi()">Chu vi</button>
+        <script>
+            function dientich() {
+                let a = +document.getElementById("number").value;
+                dt = (a * a) * 3.14;
+                alert("Diện tích của hình tròn là : "+ dt)
+            }
+            function chuvi() {
+                let a = +document.getElementById("number").value;
+                cv = (2*a) * 3.14; 
+                alert("chu vi của hình tròn là : "+ cv)
+            }
+
+        </script>
+</body>
+</html>
