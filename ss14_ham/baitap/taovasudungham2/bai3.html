@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>giai thua</title>
+</head>
+
+<body>
+    <input type="number" id="number1" placeholder="Nhập số vào đây">
+
+    <button onclick="giaithua()">Giai thừa</button>
+
+    <script>
+        function giaithua() {
+            let b = + document.getElementById("number1").value;
+            let result = 1;
+            for (let i = 1; i <= b; i++) {
+                result *= i;
+            }
+            alert(b + "!" + " = " + result)
+        }
+    </script>
+</body>
+
+</html>
