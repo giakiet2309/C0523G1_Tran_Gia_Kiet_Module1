@@ -1,11 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>một ký tự</title>
 </head>
+
 <body>
-    
+    <script>
+        let myArr = [2, 2, 4, 4, 5, 6, 7, 5, 3, 1, 7, 8, 3, 10];
+        let a = prompt('Nhập vào 1 số từ 1-10');
+        function number(a, b) {
+            let count = 0;
+            for (let i = 0; i < b.length; i++) {
+                if (a == b[i]) {
+                    count++
+                }
+            }
+            if (count > 0) {
+                return ("số lần xuất hiện : " + count);
+                document.write()
+            }
+            else {
+                return -1;
+            }
+        }
+        alert(number(a, myArr));
+    </script>
 </body>
+
 </html>
