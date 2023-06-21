@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class MobiPhone {
+        constructor(battery, draft, inbox, outbox, status) {
+            this.battery = battery;
+            this.draft = draft;
+            this.inbox = inbox;
+            this.outbox = outbox;
+            this.status = status;
+        }
+​
+        checkStatus() {
+            if (this.status) {
+                alert("The mobile is ON.")
+            } else {
+                alert("The mobile is OFF.")
+            }
+            this.battery--;
+        }
+​
+        turnOn() {
+            if (this.status) {
+                alert("Điện thoại đã bật.")
+            } else {
+                this.status = true;
+                this.battery--;
+            }
+        }
+​
+        setBattery(battery) {
+            this.battery = battery;
+        }
+​
+        setMessageDraft(message) {
+            if (this.status) {
+                this.draft.unshift(message);
+                this.battery--;
+            } else {
+                alert("Điện thoại đang tắt.")
+            }
+        }
+​
+        sendMessage(mobilePhone, message) {
+            if (this.status) {
+                this.outbox.push(message); //hộp thư đi
+                mobilePhone.inbox.unshift(message) //hộp thư đến của điện thoại nhận
+                this.battery--;
+            } else {
+                alert("Điện thoại đang tắt.")
+            }
+        }
+​
+        receiveMessage(ms) {
+            if (this.status) {
+                this.inbox.unshift(ms);
+                alert("Có tin nhắn mới");
+                this.battery--;
+            } else {
+                alert("Điện thoại đang tắt.")
+            }
+        }
+    }
+​
+    let nokia = new MobiPhone(60, [], [], [], true)
+    let iphone = new MobiPhone(90, [], [], [], true)
+​
+    // nokia.turnOn();
+    // nokia.checkStatus();
+    // nokia.checkStatus()
+    // nokia.setBattery(100)
+    // iphone.setMessageDraft("Hello")
+    nokia.receiveMessage("Có khuyến mãi ngày mai")
+    // nokia.sendMessage(iphone, 'Di cafe không?');
+    console.log('Nokia inbox: ', nokia.inbox);
+    // console.log('Nokia outbox: ', nokia.outbox);
+    // console.log('Iphone inbox: ', iphone.inbox);
+</script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hinh chu nhat</title>
+</head>
+
+<body>
+    <canvas id="Canvas" width="500" height="500"></canvas>
+    <script>
+        let a = +prompt("Hãy nhập chiều dài hcn")
+        let b = +prompt("Hãy nhập chiều rộng hcn")
+        class Rectangle {
+            constructor(length, width) {
+                this.length = length;
+                this.width = width;
+            }
+
+            getWidth() {
+                return this.width;
+            }
+            getLength() {
+                return this.length;
+            }
+            setWidth(width) {
+                this.width = width;
+            }
+            setLength(length) {
+                this.length = length;
+            }
+            getAcreage() {
+                return this.length * this.width;
+            }
+
+            getPerimeter() {
+                return (this.length * this.width) * 2;
+            }
+
+            drawCanvas() {
+                let canvas = document.getElementById("Canvas");
+                let ctx = canvas.getContext("2d");
+                ctx.fillStyle = "#fa4b2a";
+                ctx.fillRect(10, 10, this.length, this.width);
+            }
+        }
+        // Khai báo và khởi tạo một đối tượng kiểu Rectangle
+        let myRectangle = new Rectangle(a, b);
+
+        // Hiển thị hình chữ nhật trên màn hình web
+        myRectangle.drawCanvas();
+
+        // Thay đổi chiều dài và chiều rộng của hình chữ nhật
+        myRectangle.length = a;
+        myRectangle.width = b;
+
+        // In ra màn hình diện tích và chu vi của hình chữ nhật đó.
+        let acreage = myRectangle.getAcreage();
+        let perimeter = myRectangle.getPerimeter();
+        document.write("Diện tích: " + acreage + "</br>");
+        document.write("Chu vi: " + perimeter);
+    </script>
+</body>
+
+</html>

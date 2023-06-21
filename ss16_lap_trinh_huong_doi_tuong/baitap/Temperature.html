@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>độ C</title>
+</head>
+
+<body>
+    <script>
+        class Temperature {
+            // Trị số tính theo đơn vị độ C (giá trị nhỏ nhất -273 độ )
+            setValue(celsius) {
+                while (celsius < -273) {
+                    alert("Nhiệt độ không hợp lệ (giá trị nhỏ nhất -273 độ C)");
+                    celsius = +prompt("Mời nhập lại nhiệt độ");
+                }
+                this.celsius = celsius;
+            }
+
+            getCelsius() {
+                return this.celsius;
+            }
+            // Có tính năng chuyển đổi từ độ C sang độ F
+            getFahrenheit() {
+                return this.celsius * 1.8 + 32;
+            }
+            // Có tính năng chuyển đổi từ độ C sang độ Kenvin
+            getKelvin() {
+                return this.celsius + 273.15
+            }
+        }
+
+        let temp = new Temperature();
+        temp.setValue(+prompt("Nhập vào nhiệt độ Celsius"));
+        document.write(temp.getFahrenheit() + " Độ Fahrenheit <br>");
+        document.write(temp.getKelvin() + " Độ Kelvin");
+
+
+
+    </script>
+</body>
+
+</html>
