@@ -1,22 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>mô tả điện thoại</title>
 </head>
+
 <body>
     <script>
         class Mobile {
-            constructor(battery, draft, inbox, outbox, status) {
+            constructor(battery, draft, send, receive, status) {
                 this.battery = battery;
                 this.draft = draft;
-                this.inbox = inbox;
-                this.outbox = outbox;
+                this.send = send;
+                this.receive = receive;
                 this.status = status;
             }
-            
+            checkStatus() {
+                if (this.status) {
+                    alert("Điện thoại đang bật");
+                } else {
+                    alert("Điện thoại đang tắt");
+                }
+                this.battery--;
+            }
+            turnOff() {
+                if (this.status) {
+                    this.status = false;
+                    this.battery--;
+                } else {
+                    alert("Điện thoại đã tắt ");
+                }
+            }
+
+            setbattery(battery) {
+                this.battery = battery;
+            }
+
+            setDraft(message) {
+                if (this.status) {
+                    this.draft.unshift(message);
+                    this.battery--;
+                } else {
+                    alert("Bật điện thoại lên");
+                }
+            }
+
+            sendMessage(mobileTo, message) {
+                if (this.status) {
+                    this.send.unshift(message);
+                    mobileTo.receive.unshift(message);
+                    this.battery--;
+                } else {
+                    alert("Bật điện thoại lên");
+                }
+            }
+
+            receiveMessage(mess) {
+                if (this.status) {
+                    this.receive.unshift(mess);
+                    this.battery--;
+                } else {
+                    alert("Bật điện thoại lên");
+                }
+            }
+
+            getSendMessage() {
+                if (this.status) {
+                    this.battery--;
+                    return this.send;
+                } else {
+                    alert("Bật điện thoại lên");
+                }
+            }
+
+            getReceiveMessage() {
+                if (this.status) {
+                    this.battery--;
+                    return this.receive;
+                } else {
+                    alert("Bật điện thoại lên");
+                }
+            }
         }
+
+        let nokia = new Mobile(60, [], [], [], true);
+        let iphone = new Mobile(80, [], [], [], false);
+        document.write(nokia.battery + "%" + "<br/>");
+        document.write(iphone.battery + "%" + "<br/>")
+        nokia.setDraft("đi ra ngoài chơi không ?");
+        nokia.sendMessage(iphone, "đi chơi và uống nước gì đó ?");
+        document.write("inbox: " + nokia.send + "<br/>");
+        document.write("mess receive: " + iphone.receive + "<br/>");
+        document.write("outbox: " + nokia.getSendMessage() + "<br/>")
+
     </script>
 </body>
+
 </html>
