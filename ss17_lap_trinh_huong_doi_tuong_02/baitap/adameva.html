@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class apple {
+            constructor(number) {
+                this.number = 7;
+            }
+            getNumber() {
+                return this.number;
+            }
+            setNumber(number) {
+                this.number = number;
+            }
+        }
+        class Human {
+            constructor(name, gender, weight, say) {
+                this.name = name;
+                this.gender = gender;
+                this.weight = weight;
+                this.say = say;
+            }
+            getName() {
+                return this.name;
+            }
+            getWeight() {
+                return this.weight;
+            }
+            setWeight(weight) {
+                this.weight = weight;
+            }
+            getGender() {
+                if (this.gender) {
+                    return "Nam";
+                } else {
+                    return "Nữ";
+                }
+            }
+            getInfo() {
+                return "Tên: " + this.name + "</br>Giới tính: " + this.getGender() + "</br>Nói: " + this.say + "</br>Cân nặng: " +this.weight+" kg</br>";
+            }
+        }
+
+        let myApple = new apple();
+        let adam = new Human("Adam", true, 83, "Tôi thích chép phạt");
+        let eva = new Human("Eva", false, 56, "Tôi thích ăn táo");
+
+        document.write(adam.getInfo() + "</br>");
+        document.write(eva.getInfo() + "</br>");
+
+        let count = 1;
+        while (myApple.getNumber() > 0) {
+            let lst = [eva, adam];
+            let actionHuman = lst[count % 2];
+
+            myApple.setNumber(myApple.getNumber() - 1);
+            actionHuman.setWeight(actionHuman.getWeight() + 1);
+
+            document.write("Action" + count + ": " + actionHuman.getName() + " ăn táo<br>");
+            document.write("- Trọng lượng táo còn lại: " + myApple.getNumber() + "kg<br>");
+            document.write("- Trọng lượng " + actionHuman.getName() + ": " + actionHuman.getWeight() + "kg<br>");
+            document.write("<br>");
+            count++;
+        }
+    </script>
+</body>
+
+</html>

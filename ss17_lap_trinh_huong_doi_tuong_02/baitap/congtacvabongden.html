@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bóng đèn</title>
+</head>
+
+<body>
+    <button onclick="turnOn()">Bật đèn</button>
+    <button onclick="turnOff()">Tắt đèn</button>
+
+</body>
+<script>
+    class FlashLamp {
+        constructor(status) {
+            this.status = status;
+        }
+
+        getStatus() {
+            return this.status;
+
+        }
+
+        connectToLamp(lamp) {
+            this.lamp = lamp;
+        }
+
+        turnOn() {
+            if (this.lamp.status == false) {
+                alert("Đã bật đèn");
+                return this.lamp.status = true
+                    ;
+            } else {
+                alert("Đèn đang bật rồi");
+                return this.lamp.status;
+            }
+        }
+
+        turnOff() {
+            if (this.lamp.status == true) {
+                alert("Đã tắt đèn");
+                return this.lamp.status = false;
+            } else {
+                alert("Đèn đã tắt sẵn rồi");
+                return this.lamp.status;
+            }
+        }
+    }
+
+    let flash20k = new FlashLamp(false);
+    let button1 = new FlashLamp(false); 
+
+    button1.connectToLamp(flash20k);
+
+
+    function turnOn() {
+        button1.turnOn();
+    }
+
+    function turnOff() {
+        button1.turnOff();
+    }
+
+
+
+
+</script>
+
+</html>
