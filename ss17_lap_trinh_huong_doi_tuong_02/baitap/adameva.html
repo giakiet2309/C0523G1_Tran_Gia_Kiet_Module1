@@ -9,7 +9,7 @@
 
 <body>
     <script>
-        class apple {
+        class Apple {
             constructor(number) {
                 this.number = 7;
             }
@@ -48,7 +48,7 @@
             }
         }
 
-        let myApple = new apple();
+        let myApple = new Apple();
         let adam = new Human("Adam", true, 83, "Tôi thích chép phạt");
         let eva = new Human("Eva", false, 56, "Tôi thích ăn táo");
 
@@ -64,6 +64,7 @@
             actionHuman.setWeight(actionHuman.getWeight() + 1);
 
             document.write("Action" + count + ": " + actionHuman.getName() + " ăn táo<br>");
+            document.write("- Nói : Táo rất ngon</br>")
             document.write("- Trọng lượng táo còn lại: " + myApple.getNumber() + "kg<br>");
             document.write("- Trọng lượng " + actionHuman.getName() + ": " + actionHuman.getWeight() + "kg<br>");
             document.write("<br>");

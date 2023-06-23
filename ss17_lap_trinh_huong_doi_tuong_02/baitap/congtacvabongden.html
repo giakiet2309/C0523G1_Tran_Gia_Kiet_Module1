@@ -22,6 +22,12 @@
             return this.status;
 
         }
+    }
+
+    class SwitchButton {
+        constructor(status) {
+            this.status = status;
+        }
 
         connectToLamp(lamp) {
             this.lamp = lamp;
@@ -50,7 +56,7 @@
     }
 
     let flash20k = new FlashLamp(false);
-    let button1 = new FlashLamp(false); 
+    let button1 = new SwitchButton(false); 
 
     button1.connectToLamp(flash20k);
 
