@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tính lương</title>
+</head>
+
+<body>
+    <script>
+        let money = +prompt("Nhập số tiền lương của bạn");
+        let i = 0;
+        if (money >= 15000000) {
+            i = 0.2;
+        } else if (money >= 7000000) {
+            i = 0.1;
+        } else {
+            i = 0.05;
+        }
+        let result = money * (1 - i);
+        alert("Số tiền lương sau thuế của bạn : " + result);
+    </script>
+</body>
+
+</html>
