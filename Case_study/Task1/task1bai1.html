@@ -10,16 +10,24 @@
 <body>
     <script>
         let money = +prompt("Nhập số tiền lương của bạn");
+        if (money < 0) {
+            alert("Nhập số tiền hợp lệ");
+        }
         let i = 0;
+
         if (money >= 15000000) {
             i = 0.2;
+            alert("Số tiền lương sau thuế của bạn : " + money * (1 - i));
         } else if (money >= 7000000) {
             i = 0.1;
-        } else {
+            alert("Số tiền lương sau thuế của bạn : " + money * (1 - i));
+        } if ( money >0 && money <7000000) {
             i = 0.05;
+            alert("Số tiền lương sau thuế của bạn : " + money * (1 - i));
         }
-        let result = money * (1 - i);
-        alert("Số tiền lương sau thuế của bạn : " + result);
+
+
+
     </script>
 </body>
 
