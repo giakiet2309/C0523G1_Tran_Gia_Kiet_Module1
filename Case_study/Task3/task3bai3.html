@@ -8,21 +8,19 @@
 
 <body>
     <script>
-        let string1 = [5, 2, 5, 6, 8, 1];
-        let string2 = [6, 3, 4, 5, 7, 4];
-        let a = string1;
-        let b = string2;
+        let arr1 = [5, 2, 5, 6, 8, 1];
+        let arr2 = [6, 3, 4, 5, 7, 4];
 
-        for (let i = 0; i < a.length; i++) {
-            let max = a[0] / b[0];
-            if (max <= a[i] / b[i]) {
-                max = a[i] / b[i];
+        for (let i = 0; i < arr1.length; i++) {
+            let max = arr1[0] / arr2[0];
+            if (max <= arr1[i] / arr2[i]) {
+                max = arr1[i] / arr2[i];
                 index = i;
             }
         }
-        document.write("numerators = " + "[" + a + "]" + "<br/>")
-        document.write("denominators = " + "[" + b + "]" + "<br/>")
-        document.write(a[index] + "/" + b[index] + " là phân số lớn nhất, có chỉ số là " + index);
+        document.write("numerators = " + "[" + arr1 + "]" + "<br/>")
+        document.write("denominators = " + "[" + arr2 + "]" + "<br/>")
+        document.write(arr1[index] + "/" + arr2[index] + " là phân số lớn nhất, có chỉ số là " + index);
 
 
 

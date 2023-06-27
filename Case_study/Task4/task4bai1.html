@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let text1 = prompt("Nhập vào một xâu kí tự");
+        let lower = text1.toLowerCase();
+        let upper = text1.toUpperCase();
+        let text2 = upper[0];
+        for (let i = 1; i < text1.length; i++) {
+            if (text1[i - 1] == " ") {
+                if (text1[i] != " ") {
+                    text2 += upper[i];
+                } else {
+                    text2 += "";
+                }
+            } else {
+                text2 += lower[i];
+            }
+        }
+        document.write("Chuỗi ban đầu có dạng : " + text1 + "<br>");
+        document.write("Chuỗi sau khi chuẩn hóa : " + text2 + "<br>");
+        textArray = text2.split(" ");
+        let index = 0;
+        let value = textArray[0].length;
+        for (let i = 0; i < textArray.length; i++) {
+            if (value <= textArray[i].length) {
+                value = textArray[i].length;
+                index = i;
+            }
+        }
+        document.write("Chữ dài nhất : " + textArray[index]);
+
+    </script>
+</body>
+
+</html>

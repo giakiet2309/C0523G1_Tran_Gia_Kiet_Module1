@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+    <script>
+        let text = "cabcdabd";
+        let arr = text.split('');
+
+        for (let i = 0; i < arr.length; i++) {
+            for (let j = i + 1; j < arr.length; j++) {
+                if (arr[i] === arr[j]) {
+                    arr.splice(j, 1);
+                }
+            }   
+        }
+        document.write("Dãy kí tự : " + text + "</br>")
+        document.write(arr + "</br>");
+        document.write(arr.length + " kí tự khác nhau ");
+    </script>
+</body>
+
+</html>

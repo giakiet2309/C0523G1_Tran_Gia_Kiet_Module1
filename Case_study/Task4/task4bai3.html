@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let word1 = "aabcc";
+    let word2 = "adcaa";
+
+    function stringComp(stringA, stringB) {
+        let list = [];
+        let str1 = stringA.split('');
+        let str2 = stringB.split('');
+
+        for (let i = 0; i < str1.length; i++) {
+            for (let j = 0; j < str2.length; j++) {
+                if (str1[i].includes(str2[j])) {
+                    list.push(str1[i]); 
+                    str2.splice(j,1);
+                    str1.splice(i,1);
+                }
+            }
+        }
+        document.write("Xâu kí tự thứ 1 : " + word1 + "</br>");
+        document.write("Xâu kí tự thứ hai : " + word2 + "</br>");
+        document.write("Hai xâu có " + list.length + " kí tự chung" + "<br> Bao gồm :" + list );
+    }
+    
+    stringComp(word1,word2);
+</script>
+</body>
+</html>
