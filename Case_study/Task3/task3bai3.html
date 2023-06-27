@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Phân số</title>
+</head>
+
+<body>
+    <script>
+        let string1 = [5, 2, 5, 6, 8, 1];
+        let string2 = [6, 3, 4, 5, 7, 4];
+        let a = string1;
+        let b = string2;
+
+        for (let i = 0; i < a.length; i++) {
+            let max = a[0] / b[0];
+            if (max <= a[i] / b[i]) {
+                max = a[i] / b[i];
+                index = i;
+            }
+        }
+        document.write("numerators = " + "[" + a + "]" + "<br/>")
+        document.write("denominators = " + "[" + b + "]" + "<br/>")
+        document.write(a[index] + "/" + b[index] + " là phân số lớn nhất, có chỉ số là " + index);
+
+
+
+
+    </script>
+</body>
+
+</html>

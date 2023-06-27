@@ -3,24 +3,28 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Mảng a </title>
+    <title>mảng a</title>
 </head>
+
 <body>
     <script>
-        function prefixSums(a) {
-            let b = [];
-            for (let i = 0; i < a.length; i++) {
+        let arr1 = [4, 5, 6, 7];
+
+        function prefixSum(arr1) {
+            let arr2 = [];
+            for (let i = 0; i < arr1.length; i++) {
                 let sum = 0;
                 for (let j = 0; j <= i; j++) {
-                    sum += a[j];
+                    sum += arr1[j];
                 }
-                b[i] = sum;
+                arr2.push(sum);
             }
-            return b;
+            return arr2;
         }
-        
-        a = [4, 5, 6];
-        document.write(prefixSums(a));
+
+        let arrayB = prefixSum(arr1);
+        document.write("Mảng A : " + arr1 + "<br>");
+        document.write("Mảng B : " + arrayB);
     </script>
 </body>
 

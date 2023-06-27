@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quán nước SS</title>
+</head>
+
+<body>
+    <script>
+        let total = 0;
+        let flag;
+        let order;
+        let menu = ["Cafe (15000)", "Cam vắt (25000)", "Nước ép cà rốt (25000)", "Nước ép cà chua (25000)", "Nước lọc (5000)", "Nước dừa (35000)"];
+
+        do {
+            order = +prompt("Menu \n 1: Cafe \n 2:Cam vắt \n 3: Nước ép cà rốt \n 4: Nước ép cà chua \n 5: Nước lọc \n 6: Nước dừa \n 7: Cancel ");
+            let number = 0;
+
+            if (order === 7) {
+                alert("Bạn muốn kết thúc quá trình đặt nước uống ? ");
+            }
+
+            switch (order) {
+                case 1:
+                    number = +prompt(`${menu[0]} với số lượng `);
+                    total += number * 15000;
+                    break;
+
+                case 2:
+                    number = +prompt(`${menu[1]} với số lượng`);
+                    total += number * 25000;
+                    break;
+
+                case 3:
+                    number = +prompt(`${menu[2]} với số lượng`);
+                    total += number * 25000;
+                    break;
+
+                case 4:
+                    number = +prompt(`${menu[3]} với số lượng`);
+                    total += number * 25000;
+                    break;
+
+                case 5:
+                    number = +prompt(`${menu[4]} với số lượng`);
+                    total += number * 5000;
+                    break;
+
+                case 6:
+                    number = +prompt(`${menu[5]} với số lượng`);
+                    total += number * 35000;
+                    break;
+            }
+        }
+        while (order < 7 || flag === false);
+
+        if (total > 0) {
+            alert("Số tiền bạn cần thanh toán là: " + total + "đ");
+        }
+        if (order > 7) {
+            alert("không hợp lệ")
+        }
+
+
+    </script>
+</body>
+
+</html>
