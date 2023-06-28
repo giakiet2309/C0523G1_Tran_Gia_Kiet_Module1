@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 3</title>
+</head>
+<body>
+<script>
+    let arr = [
+        [4,3 , 7, 8],
+        [5, 6, 22, 18, 9, 40]
+    ];
+    
+    function findMaxMin (ar2r){
+        let max = arr[0][0];
+        let min = arr[0][0];
+        for (let i = 0; i < arr.length; i++) {
+            for (let j = 0; j < arr[i].length; j++) {
+                if (arr[i][j] > max) {
+                    max = arr[i][j];
+                }
+                if (arr[i][j] < min) {
+                    min = arr[i][j];
+                }
+            }
+        }
+        document.write("Giá trị lớn nhất trong mảng là: " + max + "<br/>");
+        document.write("Giá trị bé nhất trong mảng là: " + min);
+    }
+    findMaxMin (arr);
+</script>
+</body>
+</html>

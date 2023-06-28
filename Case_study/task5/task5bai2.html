@@ -2,10 +2,45 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Bài 2</title>
 </head>
 <body>
-    
+<script>
+    let row = +prompt("Nhập hàng");
+    let col = +prompt("Nhập cột");
+    let arr = [];
+    for (let i = 0; i < row; i++) {
+        arr[i] = [];
+        for (let j = 0; j < col; j++) {
+            arr[i][j] = +prompt(`Nhập vào phần tử [${i}][${j}] `);
+        }
+    }
+    document.write("Mảng vừa tạo là: " + arr + "<br/>");
+
+    let newArr = [];
+    for (let i = 0; i < arr.length; i++) {
+        for (let j = 0; j < arr[i].length; j++) {
+            if (soNguyenTo(arr[i][j]) !== false) {
+                newArr.push(arr[i][j]);
+            }
+        }
+    }
+    document.write("Các số nguyên tố có trong mảng là: " + newArr + "<br/>");
+    document.write("có tổng cộng = " + newArr.length +" số nguyên tố ");
+
+    function soNguyenTo(a) {
+        if (a < 2) {
+            return false;
+        } else {
+            for (let i = 2; i <= a/2; i++) {
+                if (a % i === 0) {
+                    return false;
+                }
+            }
+            return true;
+        }
+    }
+
+</script>
 </body>
 </html>
