@@ -1,11 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    
+    <script>
+
+        let m;
+        let n;
+        do {
+            m = +prompt("Nhập vào số hàng của ma trận ");
+            if (m < 2) {
+                alert("Số hàng phải > 1");
+            }
+        }
+        while (m < 2);
+        do {
+            n = +prompt("Nhập vào số cột của ma trận ");
+            if (n < 2) {
+                alert("Số cột phải > 1");
+            }
+        }
+        while (n < 2);
+
+        let matrix = [];
+
+        for (let i = 0; i < m; i++) {
+            matrix[i] = []
+            for (let j = 0; j < n; j++) {
+                matrix[i][j] = +prompt(`Nhập vào phần tử [${i}][${j}] `)
+            }
+        }
+
+        document.write("Ma trận nhập vào có dạng " + matrix + "<br/>");
+
+
+        function sumOfEvenNumber(string) {
+            let sum = 0;
+            for (let i = 0; i < string.length; i++) {
+                for (let j = 0; j < string.length; j++) {
+                    if (string[i][j] % 2 === 0) {
+                        sum += string[i][j];
+                    }
+                }
+            }
+            document.write(" Tổng các số chẵn trong ma trận là " + sum);
+        }
+
+        sumOfEvenNumber(matrix);
+    </script>
 </body>
+
 </html>
