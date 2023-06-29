@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let h = +prompt("Nhập chiều cao vào đây")
+        for (let row = 1; row <= h; row++) {
+            for (let column = 1; column <= row; column++) {
+                if (row == 1 || row == h || column == 1 | row == column) {
+                    document.write("*");
+                } else {
+                    document.write("&nbsp&nbsp");
+                }
+            }
+            document.write("</br>")
+        }
+    </script>
+</body>
+
+</html>

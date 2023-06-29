@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="addNew()">Thêm mới học viên</button>
+    <button onclick="editInfo()">Sửa thông tin học viên</button>
+    <button onclick="deleteInfo()">Xóa học viên</button>
+    </br>
+    </br>
+    <div id="display"></div>
+    <script>
+        class Student {
+            constructor(id, name, grade, email, birth) {
+                this.id = id;
+                this.name = name;
+                this.grade = grade;
+                this.email = email;
+                this.birth = birth;
+
+            }
+        }
+
+        let student1 = new Student("HV-0001", "Trần Gia A", "C0523G1", "giakietton@gmail.com", "01/01/2004");
+        let student2 = new Student("HV-0002", "Trần Gia B", "C0523G1", "giakietton@gmail.com", "02/02/2004");
+        let student3 = new Student("HV-0003", "Trần Gia C", "C0523G1", "giakietton@gmail.com", "03/03/2004");
+        let studentList = [student1, student2, student3];
+        studentListTable(studentList);
+
+        function studentListTable(arr) {
+            let table = "<table border='1' style='border-collapse: collapse'>" +
+                "<tr>" +
+                "<th>Mã học viên</th>" +
+                "<th>Tên</th>" +
+                "<th>Lớp</th>" +
+                "<th>Email</th>" +
+                "<th>Ngày sinh</th>" +
+                "</tr>"
+            for (let i = 0; i < arr.length; i++) {
+                table += "<tr>" +
+                    "<td>" + arr[i].id + "</td>" +
+                    "<td>" + arr[i].name + "</td>" +
+                    "<td>" + arr[i].grade + "</td>" +
+                    "<td>" + arr[i].email + "</td>" +
+                    "<td>" + arr[i].birth + "</td>" +
+                    "</tr>"
+            }
+            table += "</table>"
+            document.getElementById("display").innerHTML = table;
+        }
+
+        function addNew() {
+            let newId = prompt("Nhập mã học viên:");
+            let newName = prompt("Nhập tên:");
+            let newGrade = prompt("Nhập lớp:");
+            let newEmail = prompt("Nhập email:");
+            let newBirth = prompt("Nhập ngày sinh:");
+            let newStudent = new Student(newId, newName, newGrade, newEmail, newBirth);
+            studentList.push(newStudent);
+            studentListTable(studentList);
+        }
+
+        function editInfo() {
+            let enterId = prompt("Nhập ID học viên muốn sửa thông tin");
+            let flag = true;
+            for (let i = 0; i < studentList.length; i++) {
+                if (enterId === studentList[i].id) {
+                    studentList[i].name = prompt("Nhập lại tên học viên");
+                    studentList[i].grade = prompt("Nhập lại lớp học viên");
+                    studentList[i].email = prompt("Nhập lại email học viên");
+                    studentList[i].birth = prompt("Nhập lại sinh nhật học viên");
+                    flag = false;
+                    break;
+                }
+            }
+            if (flag) {
+                alert("Không tìm thấy");
+            }
+            studentListTable(studentList);
+        }
+
+        function deleteInfo() {
+            let enterId = prompt("Nhập mã HV");
+            let flag = true;
+            for (let i = 0; i < studentList.length; i++) {
+                if (enterId === studentList[i].id) {
+                    flag = false;
+                    let agreement = confirm("Bạn chắc chắn muốn xóa HV " + enterId);
+                    if (agreement === true) {
+                        studentList.splice(i, 1);
+                        break;
+                    }
+                }
+            }
+            if (flag) {
+                alert("Không tìm thấy");
+            }
+            studentListTable(studentList);
+        }
+
+    </script>
+</body>
+
+</html>
